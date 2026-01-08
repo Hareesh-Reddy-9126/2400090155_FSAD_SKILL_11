@@ -1,2 +1,10 @@
 *.class
 **/target/
+
+# IDE (Eclipse/STS)
+.classpath
+.project
+.settings/
+
+# Logs
+*.log
