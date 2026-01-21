@@ -1,51 +1,73 @@
-# FSAD Full Stack Application Development - Course Submission
+# FSAD (Full Stack Application Development) – Course Submission
 
-## Project Overview
-This repository contains all the course experiments and projects completed for the Full Stack Application Development (FSAD) course at Newarp Kluniversity.
+This repository contains Skill/Experiment projects for the FSAD course.
 
-## Completed Skills/Experiments
+## Tech Stack
+- Java (JDK 17 recommended)
+- Maven 3.x
+- MySQL (only required for Hibernate-based skills)
+- Spring Framework (skills 4 and 5)
 
-### Skill-1: Basic Maven Project Setup
-- Created a Maven quickstart project
-- Configured pom.xml with necessary dependencies
-- Compiled and ran the basic Hello World application
-- Successfully generated JAR file
+## How to Run
 
-### Skill-2: Database Connection & CRUD Operations
-- Set up MySQL database connection
-- Created database schema with student/employee tables
-- Implemented CRUD operations (Create, Read, Update, Delete)
-- Tested database connectivity and queries
-- Credentials: Database name "hareesh", Password "Hari@9126"
+### Skill 1 – Basic Maven / Hello World
+Folder: `skill-1/`
 
-### Skill-3: Student Management System (Maven-based)
-- Built a complete Java application for student management
-- Implemented database integration with MySQL
-- Created CRUD functionality for student records
-- Compiled and tested the application successfully
-- Project location: skill-3-student-management/
+- Build:
+	- `mvn -f skill-1/pom.xml clean package`
+- Run:
+	- `java -cp skill-1\target\classes Main`
 
-### Skill-4: React Frontend Application (In Progress)
-- Initiated React project setup with create-react-app
-- Creating components for student management UI
-- Implementing frontend for student data display
+### Skill 2 – Hibernate CRUD (Product)
+Folder: `skill-2/`
 
-## Technologies Used
-- Java 11+
-- Maven 3.6+
-- MySQL 5.7+
-- React 18+
-- Node.js & npm
+This module uses Hibernate and reads DB settings from `src/main/resources/hibernate.cfg.xml`.
+Update the URL/username/password in that file to match your local MySQL setup.
 
-## Prerequisites
-- JDK 11 or higher
-- Maven installed and configured
-- MySQL Server installed with root password set
-- Node.js and npm for React projects
+- Build:
+	- `mvn -f skill-2/pom.xml clean test`
+- Run (PowerShell-safe):
+	- `mvn -f skill-2/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.App"`
 
-## Project Structure
-- skill-1/
-- skill-2/
-- skill-3/
-- skill-4/
-- README.md (this file)
+### Skill 3 – Hibernate HQL Demo
+Folder: `skill-3/`
+
+This module uses Hibernate HQL and reads DB settings from `src/main/resources/hibernate.cfg.xml`.
+Update the URL/username/password in that file to match your local MySQL setup.
+
+- Build:
+	- `mvn -f skill-3/pom.xml clean test`
+- Run (PowerShell-safe):
+	- `mvn -f skill-3/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.demo.ProductHqlDemo"`
+
+### Skill 4 – Spring Core DI (XML + Java Config)
+Folder: `skill-4/`
+
+This module demonstrates dependency injection using:
+- XML configuration: `com.example.XmlConfigMain`
+- Java @Configuration: `com.example.AnnotationConfigMain`
+
+- Build:
+	- `mvn -f skill-4/pom.xml clean test`
+- Run XML config demo:
+	- `mvn -f skill-4/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.XmlConfigMain"`
+- Run annotation config demo:
+	- `mvn -f skill-4/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.AnnotationConfigMain"`
+
+### Skill 5 – Spring Autowiring (@Component + @Autowired)
+Folder: `skill-5/`
+
+This module prints the expected output:
+`Student{..., certification=Certification{...}}`
+
+- Build:
+	- `mvn -f skill-5/pom.xml clean test`
+- Run (PowerShell-safe):
+	- `mvn -f skill-5/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.MainApp"`
+
+## Repository Structure
+- `skill-1/`
+- `skill-2/`
+- `skill-3/`
+- `skill-4/`
+- `skill-5/`
