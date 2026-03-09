@@ -1,0 +1,8 @@
+[
+  { "id":1,"name":"Hareesh","email":"hareesh@mail.com","phone":"9876543210"},
+  { "id":2,"name":"Ravi","email":"ravi@mail.com","phone":"9876543211"},
+  { "id":3,"name":"Anita","email":"anita@mail.com","phone":"9876543212"},
+  { "id":4,"name":"Rahul","email":"rahul@mail.com","phone":"9876543213"},
+  { "id":5,"name":"Meena","email":"meena@mail.com","phone":"9876543214"},
+  { "id":6,"name":"Arjun","email":"arjun@mail.com","phone":"9876543215"}
+]

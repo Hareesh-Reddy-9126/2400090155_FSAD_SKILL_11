@@ -1,0 +1,91 @@
+body {
+  background: #f7f7f7;
+}
+
+.dashboard-container {
+  max-width: 700px;
+  margin: 40px auto;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px #ccc;
+  padding: 32px;
+  text-align: center;
+}
+
+.nav-buttons {
+  margin-bottom: 24px;
+}
+
+.nav-buttons button {
+  margin: 0 8px;
+  padding: 10px 24px;
+  border: none;
+  border-radius: 4px;
+  background: #1976d2;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.nav-buttons button:hover {
+  background: #1565c0;
+}
+
+.page-content {
+  margin-top: 24px;
+}
+
+.user-table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 90%;
+  background: #fafafa;
+}
+
+.user-table th, .user-table td {
+  border: 1px solid #bbb;
+  padding: 8px 12px;
+  text-align: left;
+}
+
+.user-table th {
+  background: #e3e3e3;
+}
+
+.loader {
+  color: #1976d2;
+  font-weight: bold;
+  margin: 16px;
+}
+
+.error {
+  color: #d32f2f;
+  font-weight: bold;
+  margin: 16px;
+}
+
+.controls {
+  margin-bottom: 16px;
+}
+
+.post-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
+}
+
+.post-card {
+  background: #f5f5f5;
+  border-radius: 6px;
+  box-shadow: 0 1px 4px #ccc;
+  padding: 16px;
+  width: 260px;
+  text-align: left;
+}
+
+.post-card h4 {
+  margin: 0 0 8px 0;
+  color: #1976d2;
+}
