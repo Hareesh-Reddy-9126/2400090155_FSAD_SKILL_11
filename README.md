@@ -1,87 +1,69 @@
-FSAD (Full Stack Application Development) – Course Submission
+🚀 FSAD Lab Experiments
+Full Stack Application Development (Course Repository)
+<p align="center"> <img src="https://img.shields.io/badge/Java-17-orange" /> <img src="https://img.shields.io/badge/Maven-Build-red" /> <img src="https://img.shields.io/badge/Hibernate-ORM-yellow" /> <img src="https://img.shields.io/badge/Spring-Core-green" /> <img src="https://img.shields.io/badge/Spring-Boot-brightgreen" /> </p> <p align="center"> Repository containing laboratory experiments for the <b>Full Stack Application Development (FSAD)</b> course. </p>
+📘 About This Repository
 
-This repository contains Skill/Experiment projects for the FSAD (Full Stack Application Development) course. Each skill demonstrates different backend development concepts using Java, Maven, Hibernate, Spring Framework, and Spring Boot.
+This repository contains six skill-based experiments implemented using modern Java backend technologies.
 
-Tech Stack
+Each experiment demonstrates important backend concepts such as:
 
-Java (JDK 17 recommended)
+Version Control using Git
 
-Maven 3.x
+ORM using Hibernate
 
-MySQL (required for Hibernate-based skills)
+Querying using HQL
 
-Spring Framework (Core DI & Autowiring)
+Spring Dependency Injection
 
-Spring Boot (Web MVC)
+Spring Autowiring
 
-VS Code / Spring Tool Suite
+Spring Boot REST APIs
 
-How to Run
-Skill 1 – Basic Maven / Hello World
+All projects are built using Maven and organized in a modular structure.
 
-Folder: skill-1/
+🛠 Technology Stack
+Technology	Purpose
+Java 17	Core programming language
+Maven	Build and dependency management
+Hibernate ORM	Object Relational Mapping
+Spring Framework	Dependency Injection & Autowiring
+Spring Boot	REST API development
+MySQL	Database for Hibernate experiments
+VS Code / STS	Development environments
+📂 Repository Structure
+skill-1   → Git Version Control Demo
+skill-2   → Hibernate CRUD Operations
+skill-3   → Hibernate HQL Queries
+skill-4   → Spring Dependency Injection
+skill-5   → Spring Autowiring (@Autowired)
+skill-6   → Spring Boot MVC Web Request Handling
 
-Build:
+Each folder contains an independent Maven project.
 
+🧪 Experiment Overview
+Skill	Experiment	Key Concepts
+Skill-1	Git Version Control	Git workflow, commits, branching
+Skill-2	Hibernate CRUD	ORM mapping, insert/update/delete
+Skill-3	Hibernate HQL	Sorting, pagination, aggregate queries
+Skill-4	Spring Dependency Injection	Constructor & Setter Injection
+Skill-5	Spring Autowiring	@Component and @Autowired
+Skill-6	Spring Boot MVC	REST APIs, request handling
+⚙️ Running the Projects
+🧩 Skill-1 – Basic Maven Project
 mvn -f skill-1/pom.xml clean package
+java -cp skill-1/target/classes Main
+🧩 Skill-2 – Hibernate CRUD
+
+Before running, update database credentials in:
+
+skill-2/src/main/resources/hibernate.cfg.xml
 
 Run:
-
-java -cp skill-1\target\classes Main
-Skill 2 – Hibernate CRUD (Product)
-
-Folder: skill-2/
-
-This module demonstrates CRUD operations using Hibernate ORM.
-Database configuration is stored in:
-
-src/main/resources/hibernate.cfg.xml
-
-Update the MySQL URL, username, and password before running.
-
-Build:
 
 mvn -f skill-2/pom.xml clean test
-
-Run:
-
-mvn -f skill-2/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.App"
-Skill 3 – Hibernate HQL Demo
-
-Folder: skill-3/
-
-This module demonstrates HQL queries including sorting, pagination, filtering, and aggregate functions.
-
-Database configuration:
-
-src/main/resources/hibernate.cfg.xml
-
-Build:
-
+🧩 Skill-3 – Hibernate HQL
 mvn -f skill-3/pom.xml clean test
-
-Run:
-
-mvn -f skill-3/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.demo.ProductHqlDemo"
-Skill 4 – Spring Core Dependency Injection
-
-Folder: skill-4/
-
-This module demonstrates Spring Dependency Injection using XML configuration and Java-based configuration.
-
-Features demonstrated:
-
-Constructor Injection
-
-Setter Injection
-
-XML Configuration
-
-Annotation-based Configuration
-
-Build:
-
-mvn -f skill-4/pom.xml clean test
+🧩 Skill-4 – Spring Dependency Injection
 
 Run XML configuration demo:
 
@@ -90,59 +72,15 @@ mvn -f skill-4/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.ma
 Run annotation configuration demo:
 
 mvn -f skill-4/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.AnnotationConfigMain"
-Skill 5 – Spring Autowiring (@Component + @Autowired)
-
-Folder: skill-5/
-
-This module demonstrates Spring Autowiring using @Component and @Autowired where the Certification object is automatically injected into the Student object by the Spring IoC container.
-
-Expected output example:
-
-Student{id=101, name='Hareesh', gender='Male', certification=Certification{id=501, name='Spring Professional', dateOfCompletion='10-01-2026'}}
-
-Build:
-
-mvn -f skill-5/pom.xml clean test
-
-Run:
-
+🧩 Skill-5 – Spring Autowiring
 mvn -f skill-5/pom.xml org.codehaus.mojo:exec-maven-plugin:3.1.0:java "-Dexec.mainClass=com.example.MainApp"
-Skill 6 – Spring Boot MVC Web Request Handling
 
-Folder: skill-6/
+Example Output:
 
-This module demonstrates Spring Boot REST APIs using Spring MVC annotations.
+Student{id=101, name='Hareesh', gender='Male', certification=Certification{...}}
+🧩 Skill-6 – Spring Boot MVC
 
-Concepts demonstrated:
-
-@RestController
-
-@GetMapping
-
-@PostMapping
-
-@PathVariable
-
-@RequestParam
-
-@RequestBody
-
-In-memory data storage
-
-Endpoints implemented:
-
-Endpoint	Description
-/welcome	Returns welcome message
-/count	Returns total number of books
-/price	Returns sample book price
-/books	Returns list of book titles
-/books/{id}	Returns book details using path variable
-/search?title=	Searches book by title
-/author/{name}	Returns books by author
-/addbook	Adds a book using POST request
-/viewbooks	Returns all stored books
-
-Run the Spring Boot application:
+Start the Spring Boot application:
 
 mvn -f skill-6/pom.xml spring-boot:run
 
@@ -150,21 +88,50 @@ Application runs at:
 
 http://localhost:8081
 
-Example:
+Example endpoints:
 
-http://localhost:8081/welcome
-Repository Structure
-skill-1/
-skill-2/
-skill-3/
-skill-4/
-skill-5/
-skill-6/
+/welcome
+/books
+/books/{id}
+/search?title=Java
+/author/{name}
+/addbook
+/viewbooks
+🌐 Example API Endpoints
+Endpoint	Method	Description
+/welcome	GET	Welcome message
+/count	GET	Returns book count
+/price	GET	Returns book price
+/books	GET	List of book titles
+/books/{id}	GET	Book details
+/search?title=	GET	Search books
+/author/{name}	GET	Author information
+/addbook	POST	Add a new book
+/viewbooks	GET	View all books
+🎯 Learning Outcomes
 
-Each folder contains an independent Maven project demonstrating a specific FSAD concept.
+By completing these experiments, the following concepts were practiced:
 
-Author
+Git repository management
+
+Hibernate ORM and CRUD operations
+
+Advanced queries using HQL
+
+Spring Dependency Injection
+
+Spring Autowiring
+
+REST API development using Spring Boot
+
+Web request handling using MVC architecture
+
+👨‍💻 Author
 
 GURRALA HAREESH REDDY
 ID: 2400090155
 Course: Full Stack Application Development (FSAD)
+
+⭐ Purpose
+
+This repository was created for academic laboratory submission and demonstrates practical implementation of Java enterprise development frameworks.
